@@ -1,0 +1,7 @@
+<div>
+  
+    <button type="button" (onConfirm)="getUsers()" [disabled]="isLoading" appConfirm>load users</button>
+    <app-user-view [user]="userItem" *ngFor="let userItem of loadedUsers" (onRemove)="removeUser($event)"></app-user-view>
+  
+    
+  </div>

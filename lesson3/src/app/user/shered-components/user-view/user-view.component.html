@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col s3">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ imgs[0] }}" appGallery [imgs]="imgs" />
+        <span class="card-title">{{user.name.first | decline}} {{user.name.last | decline}}</span>
+      </div>
+      <div class="card-content">
+        
+        <div>dob: {{ user.dob | dateformat:'DD MMMM YYYY' }}</div>
+        <div>gender: {{ user.gender }}</div>
+        <div>phone: {{ user.phone }}</div>
+        <div>email: {{ user.email }}</div>
+
+      </div>
+      <div class="card-action">
+          <button (click)="delete()">delete</button>
+      </div>
+    </div>
+  </div>
+</div>
